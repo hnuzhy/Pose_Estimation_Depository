@@ -12,15 +12,15 @@ The deep model part of it uses VGGNet to extract image features, and then divide
 Codes are only tested Under Python2.7. Besides, you need to install [Pytorch](http://pytorch.org/) and OpenCV with pip
 
 ## 3) Testing
-- Download test codes in your machine. But you have no need to clone other unrelated branch projects, and just pull `CV_DL_Gather/pose_estimation/PAF_CMU-OpenPose` as follows. **Do not use Windows PowerShell**, it's not supported. Please use `git bash` or Linux.
+- Download test codes in your machine. But you have no need to clone other unrelated branch projects, and just pull `Pose_Estimation_Depository/PAF_CMU-OpenPose` as follows. **Do not use Windows PowerShell**, it's not supported. Please use `git bash` or Linux.
   ```
-  git clone -n https://github.com/hnuzhy/CV_DL_Gather.git
-  cd CV_DL_Gather
+  git clone -n https://github.com/hnuzhy/Pose_Estimation_Depository.git
+  cd Pose_Estimation_Depository
   git config core.sparsecheckout true
-  echo pose_estimation/PAF_CMU-OpenPose >> .git/info/sparse-checkout
+  echo PAF_CMU-OpenPose >> .git/info/sparse-checkout
   git checkout master
   ```
-- `cd CV_DL_Gather/pose_estimation/PAF_CMU-OpenPose && cd model` and download [pre-trained model](https://pan.baidu.com/s/1jCBY8xef4-Pg1Ug9wrPs8g) to put it under this folder. PassWord is：**2t0f**
+- `cd Pose_Estimation_Depository/PAF_CMU-OpenPose && cd model` and download [pre-trained model](https://pan.baidu.com/s/1jCBY8xef4-Pg1Ug9wrPs8g) to put it under this folder. PassWord is：**2t0f**
 - `python eval_images.py` to run test script. It will predict images under *./test_imgs/classroom_test/*. You can change `folderList` in `eval_images.py` to test your own images.
 - `cd src && vim config_file` You can edit *config_file* to change config for trade-off between detection accuracy and inference latency. `scale_search = 0.5, 1, 1.2, 1.5` is for image multi-scale detection. `scale_ratio = 0.5` will resize original image smaller to reduce time. `pk_mode = 'fullKP'` changes in ['fullKP', 'PK12'] for faster run. `'PK12'` mode predicts keypoints about upper body as below. 
 
