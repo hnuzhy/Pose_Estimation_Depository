@@ -59,12 +59,12 @@ OpenCV 3.4.1
 ```
 
 ### 3.2) Training and Testing
-- **Codes:** Download codes in your machine. You can ignore other unrelated parts and just pull `CV_DL_Gather/pose_estimation/PersonLab` as follows. **Do not use Windows PowerShell**, it doesn't support `parse-checkout`. Please use git bash or Linux.
+- **Codes:** Download codes in your machine. You can ignore other unrelated parts and just pull `Pose_Estimation_Depository/PersonLab` as follows. **Do not use Windows PowerShell**, it doesn't support `parse-checkout`. Please use git bash or Linux.
   ```
-  git clone -n https://github.com/hnuzhy/CV_DL_Gather.git
-  cd CV_DL_Gather
+  git clone -n https://github.com/hnuzhy/Pose_Estimation_Depository.git
+  cd Pose_Estimation_Depository
   git config core.sparsecheckout true
-  echo pose_estimation/PersonLab >> .git/info/sparse-checkout
+  echo PersonLab >> .git/info/sparse-checkout
   git checkout master
   ```
   
